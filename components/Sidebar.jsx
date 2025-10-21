@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { assets } from "../assets/assets";
+import { assets } from "@/assets/assets";
 import { useClerk, UserButton } from "@clerk/nextjs";
-import { useAppContext } from "../Context/AppContext";
+import { useAppContext } from "@/context/AppContext";
 import ChatLabel from "./ChatLabel";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";

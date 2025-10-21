@@ -1,11 +1,10 @@
 "use client";
-import { assets } from "../assets/assets";
-import PromptBox from "../Components/PromptBox";
-import Sidebar from "../Components/Sidebar";
+import { assets } from "@/assets/assets";
+import PromptBox from "@/components/PromptBox";
+import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import { useState } from "react";
-// import Message from "@/Components/Message";
-import Message from "../Components/Message";
+import Message from "@/components/Message";
 
 // Hello
 export default function Home() {
