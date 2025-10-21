@@ -1,15 +1,15 @@
-"use client";
+import mongoose from "mongoose";
 
-import { useUser } from "@clerk/nextjs";
-import { createContext, useContext } from "react";
+const UserSchema = new mongoose.Schema(
+  {
+    _id: { type: String, required: true },
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    image: { type: String, required: false },
+  },
+  { timestamps: true }
+);
 
-export const AppContext = createContext();
+const User = mongoose.models.User || mongoose.model("User", UserSchema);
 
-export const useAppContext = () => useContext(AppContext);
-
-export const AppContextProvider = ({ children }) => {
-  const { user } = useUser();
-  const value = { user };
-
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
-};
+export default User;
